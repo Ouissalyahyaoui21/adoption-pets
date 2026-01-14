@@ -200,8 +200,31 @@ include "db.php";
 
 </div>
 
+<script>
+$(document).ready(function(){
 
+  $(".add-cart").click(function(){
+    let product = $(this).data("product");
+    $.post("cart.php", { product: product }, function(count){
+      $("#cart-count").text(count);
+      alert(product + " added to cart ✅");
+    });
+  });
+
+  $("#view-cart").click(function(){
+    $.get("cart.php", { action: "view" }, function(data){
+    
+      alert(data);
+    });
+  });
+
+});
+</script>
+
+
+</script>
 
 </body>
 </html>
+
 
