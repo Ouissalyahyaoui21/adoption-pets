@@ -30,14 +30,14 @@ include "db.php";
         <span class="E">E</span>
         <span class="N">N</span>
     </a>
-    <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#products">Products</a>
-        <a href="#review"> Review</a>
-        <a href="#contact">adept </a>
+   <nav class="navbar">
+        <a href="pet.html">Home</a>
+        <a href="contact.html">About</a>
+        <a href="products.php">Products</a>
+        <a href="take-care.html"> Review</a>
+        <a href="adopt_pets.php">adept </a>
         <a href="PatsSpot.html">PatsSpot</a>
-        <a href="#contact">Ask ai</a>
+        <a href="ai.html">Ask ai</a>
     </nav>
     <div class="icons">
         <a href="#" class="fas fa-user"></a>
@@ -204,3 +204,4 @@ include "db.php";
 
 </body>
 </html>
+
