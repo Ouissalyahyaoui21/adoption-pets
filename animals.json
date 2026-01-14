@@ -1,0 +1,47 @@
+[
+    {
+        "personName": "Nerimane",
+        "email": "Neri@gmail.com",
+        "animalName": "lola",
+        "animalType": "cat",
+        "age": 1,
+        "healthStatus": "healthy",
+        "friendly": "yes",
+        "urgent": "no",
+        "foundDate": "2026-01-08",
+        "size": "small",
+        "location": "lkjhgfdsdfghjkl",
+        "notes": "cute ",
+        "image": "uploads\/1768372512_an-orange-kitten-sitting-on-a-blanket-photo.jpeg"
+    },
+    {
+        "personName": "yassine",
+        "email": "yas@gmail.com",
+        "animalName": "bisa",
+        "animalType": "other",
+        "age": 2,
+        "healthStatus": "healthy",
+        "friendly": "yes",
+        "urgent": "no",
+        "foundDate": "2026-01-07",
+        "size": "medium",
+        "location": "wxdghjkliufdfhj",
+        "notes": "take care of it ",
+        "image": "uploads\/1768372807_60bae9b0c022a851e8434ad4b7fcae58.jpg"
+    },
+    {
+        "personName": "amira",
+        "email": "ami@gmail.com",
+        "animalName": "max",
+        "animalType": "dog",
+        "age": 4,
+        "healthStatus": "needs-care",
+        "friendly": "yes",
+        "urgent": "yes",
+        "foundDate": "2026-01-01",
+        "size": "",
+        "location": "ojhgfdxdfghjkl",
+        "notes": "Help, please.",
+        "image": "uploads\/1768372972_cutest-dog-breed-bernese-64356a43dbcc5.avif"
+    }
+]
