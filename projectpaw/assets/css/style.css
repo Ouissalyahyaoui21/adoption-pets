@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #dee5ef;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+.pets-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+.pet-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.pet-card:hover {
+  transform: translateY(-5px);
+}
+.pet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+.pet-card h3 {
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.pet-card p {
+  color: #555;
+  font-size: 14px;
+}
+.cute {
+  font-style: italic;
+  color: #ff6b81;
+  margin: 10px 0;
+}
+.pet-card button {
+  background-color: #ff6b81;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.pet-card button:hover {
+  background-color: #ff4757;
+}
+form {
+  max-width: 500px;
+  background: white;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+form input,
+form textarea,
+form select {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+form button {
+  width: 100%;
+  background-color: #2ed573;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+form button:hover {
+  background-color: #1eae60;
+}
+/* Adoption Form */
+.adoption-container input::placeholder,
+.adoption-container textarea::placeholder {
+  color: #aaa;
+}
+.adoption-container input:focus,
+.adoption-container textarea:focus,
+.adoption-container select:focus {
+  border-color: #ff6b81;
+  box-shadow: 0 0 5px rgba(255,107,129,0.3);
+}
+ @media (max-width: 600px) {
+  .adoption-container {
+    margin: 30px;
+    padding: 30px;
+  }
+}
