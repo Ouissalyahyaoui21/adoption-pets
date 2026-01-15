@@ -1,0 +1,156 @@
+:root {
+  --pink: #ff6b81;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #dee5ef;
+  padding: 140px 20px 20px 20px;
+}
+
+header{
+    position: fixed;
+    top:0; left:0; right:0;
+    background:#fff;
+    padding: 1rem 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    z-index:1000;
+    box-shadow:0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size:1.4rem;
+    font-weight:bolder;
+    color:#333;
+    display: inline-block;
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+header .logo span{
+    color:var(--pink);
+}
+
+header .navbar a{
+    font-size:1.5rem;
+    color:#666;
+    margin-left:1rem;
+    text-decoration:none;
+}
+
+header .navbar a:hover{
+    color:var(--pink);
+}
+
+header .icons a{
+    font-size:1.5rem;
+    color:#333;
+    margin-left:1rem;
+    text-decoration: none;
+}
+
+header .icons a:hover{
+    color:var(--pink);
+}
+
+header #toggler{
+    display:none;
+}
+
+header .fa-bars{
+    font-size:1.8rem;
+    color:#333;
+    cursor:pointer;
+    display:none;
+}
+
+@keyframes logoPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+ 
+h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  color: #333;
+}
+
+ 
+.pets-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);  
+  gap: 20px;
+  margin-bottom: 50px;
+}
+
+ @media (max-width: 992px) {
+  .pets-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .pets-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+.pet-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 10px;
+}
+
+.pet-card h3 {
+  color: #222;
+  margin-bottom: 8px;
+}
+
+.pet-card p {
+  color: #555;
+  font-size: 14px;
+}
+
+.cute {
+  font-style: italic;
+  color: var(--pink);
+  margin: 10px 0;
+}
+
+.price {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.pet-card button {
+  background-color: var(--pink);
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  width: 80%;
+}
+
+.pet-card button:hover {
+  background-color: #ff4757;
+}
