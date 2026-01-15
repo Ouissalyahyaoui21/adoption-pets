@@ -1,0 +1,239 @@
+:root{
+    --pink:#db87bbdc;
+}
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: .2s linear;
+}
+
+html{
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+body{
+    background: #f9f9f9;
+}
+
+/* ===== HEADER ===== */
+header{
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    background: #fff;
+    padding: 2rem 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+}
+
+header .logo{
+    font-size: 3rem;
+    color: #333;
+    font-weight: bolder;
+    display: inline-block;
+    animation: logoPulse 2s ease-in-out infinite;
+}
+
+header .logo span{
+    color: var(--pink);
+}
+
+header .navbar a{
+    font-size: 2rem;
+    color: #666;
+    margin-left: 2rem;
+}
+
+header .navbar a.active,
+header .navbar a:hover{
+    color: var(--pink);
+}
+
+header .icons a{
+    font-size: 2.5rem;
+    color: #333;
+    margin-left: 1rem;
+    text-decoration: none;
+}
+
+header #toggler{
+    display: none;
+}
+
+/* ===== LOGO ANIMATION ===== */
+@keyframes logoPulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    background: rgba(255, 51, 153, .05);
+}
+
+.heading span{
+    color: var(--pink);
+    font-family: mv boli;
+}
+
+/* ===== CONTACT SECTION ===== */
+.contact{
+    padding: 12rem 9% 4rem;
+}
+
+.contact .heading{
+    text-align: center;
+    font-size: 4rem;
+    color: #333;
+    margin-bottom: 4rem;
+}
+
+.contact .heading span{
+    color: var(--pink);
+}
+
+.manager_container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 2rem;
+}
+
+.manager_box{
+    flex: 1 1 220px;
+    max-width: 250px;
+    background: #fff;
+    padding: 1.5rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.1);
+    transition: transform 0.3s;
+}
+
+.manager_box:hover{
+    transform: translateY(-5px);
+}
+
+.Profile img{
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.manager_box .Name{
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: .5rem;
+}
+
+.manager_box .bio{
+    font-size: 1.4rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.manager_icon i{
+    font-size: 1.6rem;
+    color: #333;
+    margin: 0 .3rem;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.manager_icon i:hover{
+    color: var(--pink);
+}
+
+/* ===== CONTACT INFO ===== */
+.contact_info{
+    background: #fff;
+    padding: 2rem;
+    margin-top: 4rem;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.1);
+    border: .1rem solid rgba(0,0,0,.1);
+}
+
+.contact_info h2{
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.contact_info p{
+    font-size: 1.6rem;
+    color: #555;
+    margin: .7rem 0;
+}
+
+/* ===== FOOTER ===== */
+footer.footer{
+    background: #fff;
+    text-align: center;
+    padding: 2rem 9%;
+    margin-top: 0.5rem;
+    border-top: .1rem solid rgba(0,0,0,.1);
+    font-size: 1.6rem;
+    color: #333;
+}
+
+footer.footer span{
+    color: var(--pink);
+}
+
+/* ===== MEDIA QUERIES ===== */
+@media screen and (max-width: 991px){
+    html{ font-size: 55%; }
+    header{ padding: 2rem; }
+    .contact{ padding: 12rem 2rem 4rem; }
+}
+
+@media screen and (max-width: 768px){
+    .manager_container{
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .manager_box{
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%; left: 0; right: 0;
+        background: #eee;
+        border-top: .1rem solid rgba(0,0,0,.1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+
+    header .navbar a{
+        display: block;
+        margin: 1rem;
+        padding: 1rem;
+        background: #fff;
+        border: .1rem solid rgba(0,0,0,.1);
+    }
+}
