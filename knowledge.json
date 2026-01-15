@@ -1,0 +1,34 @@
+[
+  {
+    "keywords": ["dog", "chien", "puppy", "puppy dog"],
+    "answer": "Dogs are friendly animals and need daily walks. Les chiens sont amicaux et ont besoin de promenades quotidiennes."
+  },
+  {
+    "keywords": ["cat", "chat", "kitten"],
+    "answer": "Cats need 2 meals per day and love sleeping. Les chats ont besoin de deux repas par jour et adorent dormir."
+  },
+  {
+    "keywords": ["hamster", "hamster", "hamster food"],
+    "answer": "Hamsters are small rodents that love seeds and vegetables. Les hamsters aiment les graines et légumes."
+  },
+  {
+    "keywords": ["cow", "vache", "milk"],
+    "answer": "Cows are farm animals providing milk. Les vaches fournissent du lait."
+  },
+  {
+    "keywords": ["sheep", "mouton", "wool"],
+    "answer": "Sheep are raised for wool and meat. Les moutons sont élevés pour la laine et la viande."
+  },
+  {
+    "keywords": ["goat", "chèvre", "milk", "chevre"],
+    "answer": "Goats are farm animals giving milk and meat. Les chèvres fournissent du lait et de la viande."
+  },
+  {
+    "keywords": ["adoption", "adopter", "adoption animal", "adoption pets"],
+    "answer": "To adopt a pet, visit our adoption page. Pour adopter un animal, veuillez visiter notre page d'adoption."
+  },
+  {
+    "keywords": ["dog care", "soin chien", "cat care", "soin chat"],
+    "answer": "Provide regular feeding, vaccinations, and love to your pets. Donnez des repas réguliers, des vaccins et de l'amour à vos animaux."
+  }
+]

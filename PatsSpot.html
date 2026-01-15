@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pets Haven</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="pet.css"> 
+
+</head>
+<body>
+
+<header>
+        <input type="checkbox" name="" id="toggler">
+        <label for="toggler" class="fas fa-bars"></label>
+        <a href="#" class="logo">
+            <span class="P">P</span>
+            <span class="pet">&#x1F436;</span>
+            <span class="E">E</span>
+            <span class="T">T</span>
+            <span class="S">S</span>
+            <span class="_">_</span>
+            <span class="H">H</span>
+            <span class="A">A</span>
+            <span class="V">V</span>
+            <span class="E">E</span>
+            <span class="N">N</span>
+        </a>
+        <nav class="navbar">
+            <a href="pet.html">Home</a>
+            <a href="contact.html">About</a>
+            <a href="products.php">Products</a>
+            <a href="take-care.html"> Review</a>
+            <a href="adopt_pets.php">adopt </a>
+             <a href="PatsSpot.html">PatsSpot</a>
+              <a href="ai.html">Ask ai</a>
+        </nav>
+        <div class="icons">
+          
+            <a href="#" class="fas fa-user"></a>
+             <a href="#" class="fas fa-heart"></a>
+            <a href="#" class="fas fa-paw adopt"></a>
+        </div>
+    </header>
+
+<section class="contact" id="pawspot" style="padding-top:100px;">
+    <h1 class="heading"><span>Submit a</span> Found Animal</h1>
+    <p style="margin-bottom:20px; font-size:16px; color:#333; line-height:1.5;">
+        🐶🐱 Found a stray animal? Please place them in our cozy shelter or temporary care before submitting their details below.  
+        Every paw deserves warmth, love, and care while waiting for a forever home.  
+        Even small acts of kindness—feeding, gentle pats, or sharing helpful info—can make a big difference.  
+        Thank you for helping our furry friends feel safe and loved! 🐾❤️
+    </p>
+
+    <div class="row">
+        <form id="animalForm" enctype="multipart/form-data">
+            <input type="text" class="box" name="personName" placeholder="Your Name" required>
+            <input type="email" class="box" name="email" placeholder="Email" required>
+            <input type="text" class="box" name="animalName" placeholder="Animal Name">
+            <select class="box" name="animalType" required>
+                <option value="">Select Animal Type</option>
+                <option value="dog">Dog 🐶</option>
+                <option value="cat">Cat 🐱</option>
+                <option value="other">Other 🐾</option>
+            </select>
+            <input type="number" class="box" name="age" placeholder="Approximate Age (years)">
+            <select class="box" name="healthStatus" required>
+                <option value="">Health Status</option>
+                <option value="healthy">Healthy</option>
+                <option value="injured">Injured</option>
+                <option value="needs-care">Needs Care</option>
+            </select>
+            <select class="box" name="friendly">
+                <option value="">Friendly with humans?</option>
+                <option value="yes">Yes 😊</option>
+                <option value="no">No 😐</option>
+            </select>
+            <select class="box" name="urgent">
+                <option value="">Needs urgent care?</option>
+                <option value="yes">Yes 🚑</option>
+                <option value="no">No ✅</option>
+            </select>
+            <input type="date" class="box" name="foundDate">
+            <select class="box" name="size">
+                <option value="">Size</option>
+                <option value="small">Small 🐾</option>
+                <option value="medium">Medium 🐾</option>
+                <option value="large">Large 🐾</option>
+            </select>
+            <input type="text" class="box" name="location" placeholder="Location Found" required>
+            <textarea class="box" name="notes" placeholder="Additional Notes" cols="30" rows="5"></textarea>
+            <input type="file" class="box" name="image" accept="image/*">
+            <input type="submit" value="Submit Animal" class="btn">
+        </form>
+
+        <div id="thankYouMessage" style="margin-top:20px; font-size:16px; color:#2e7d32;"></div>
+    </div>
+</section>
+
+<script>
+document.getElementById('animalForm').addEventListener('submit', function(e){
+    e.preventDefault(); 
+
+    const formData = new FormData(this);
+
+    fetch('pawspot.php', {
+        method: 'POST',
+        body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+        document.getElementById('thankYouMessage').innerHTML = data;
+        document.getElementById('animalForm').reset();
+    })
+    .catch(error => console.error('Error:', error));
+});
+</script>
+
+</body>
+</html>
